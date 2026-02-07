@@ -1,5 +1,6 @@
 "use client";
 
+import { AppleHelloEnglishEffect } from "./ui/apple-hello-effect";
 import { ArrowRight } from "lucide-react";
 
 interface WelcomeScreenProps {
@@ -14,13 +15,10 @@ export default function WelcomeScreen({ onGetStarted }: WelcomeScreenProps) {
                 background: "linear-gradient(135deg, #1e90ff 0%, #4dc0e0 25%, #7dd8c7 50%, #f5b041 75%, #e67e22 100%)"
             }}
         >
-            {/* Hello Text */}
-            <h1
-                className="hello-text text-white text-[120px] md:text-[180px] lg:text-[220px] font-normal mb-8 drop-shadow-lg select-none"
-                style={{ textShadow: "0 4px 30px rgba(0,0,0,0.15)" }}
-            >
-                hello
-            </h1>
+            {/* Apple Hello Animation */}
+            <div className="mb-12">
+                <AppleHelloEnglishEffect className="h-32 md:h-40 lg:h-48 text-white" speed={1.2} />
+            </div>
 
             {/* Get Started Button */}
             <button
